@@ -8,5 +8,5 @@
     invalidate_hard_deletes=True
   )
 }}
-SELECT * FROM {{ ref('clean_stock_data') }}
+SELECT * FROM {{ ref('transform_stock_metrics') }}
 {% endsnapshot %}
