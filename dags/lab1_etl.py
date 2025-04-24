@@ -20,14 +20,14 @@ def return_snowflake_conn():
 @task
 def extract():
     """
-    Fetch stock data for NVDA and AAPL from Yahoo Finance (last 180 days).
+    Fetch stock data for NVDA and AAPL from Yahoo Finance (last 360 days).
     """
     stocks = ["NVDA", "AAPL"]
     data = {}
 
     for stock in stocks:
         ticker = yf.Ticker(stock)
-        df = ticker.history(period="180d")  # Fetch 180 days of historical data
+        df = ticker.history(period="360d")  # Fetch 360 days of historical data
 
         # Reset index and rename columns to match Snowflake table structure
         df.reset_index(inplace=True)

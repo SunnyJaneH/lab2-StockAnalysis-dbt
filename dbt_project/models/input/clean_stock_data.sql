@@ -29,3 +29,4 @@ data_for_analysis AS (
 
 SELECT * 
 FROM data_for_analysis
+ORDER BY symbol, date

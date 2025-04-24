@@ -61,8 +61,8 @@ models:
       - name: moving_avg_50d
         description: "50-day moving average of the closing price."
 
-      - name: moving_avg_100d
-        description: "100-day moving average of the closing price."
+      - name: moving_avg_200d
+        description: "200-day moving average of the closing price."
 
       - name: volume_avg_7d
         description: "7-day average of trading volume."
