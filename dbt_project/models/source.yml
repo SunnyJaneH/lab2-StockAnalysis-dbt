@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    database: USER_DB_SWORDFISH
+    schema: raw
+    description: "Schema containing raw stock price data (ETL)."
+    tables:
+      - name: stock_data
+        identifier: stock_data
+        description: "Raw stock price data including symbol, date, open, close, high, low, and volume."
+
+  - name: analytics
+    database: USER_DB_SWORDFISH
+    schema: analytics
+    description: "Schema containing transformed stock analytics data."
+    tables:
+      - name: transform_stock_metrics
+        identifier: transform_stock_metrics
+        description: "Transformed stock data including moving averages, price changes, and volume trends."
